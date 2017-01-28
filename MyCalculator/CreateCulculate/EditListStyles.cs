@@ -22,7 +22,7 @@ namespace MyCalculator
 					Value = Color.Black
 					},
 				new Setter{
-					Property = Label.VerticalOptionsProperty,
+					Property = View.VerticalOptionsProperty,
 					Value = LayoutOptions.Center
 				},
 				new Setter{
