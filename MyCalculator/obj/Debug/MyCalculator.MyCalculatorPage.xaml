@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage x:Class="MyCalculator.MyCalculatorPage"
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:local="clr-namespace:MyCalculator"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+  <ContentPage Title="電卓" x:Name="Cul">  
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>0,20,0,0</OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <Page.Resources>
+		<ResourceDictionary>
+			
+			<Color x:Key="bgColor">#c0c0c0</Color>
+			<Color x:Key="fgColor">#606060</Color>
+			<Style x:Key="baseLabelStyle" TargetType="Label">
+        		<Setter Property="FontSize" Value="22" />
+    		</Style>
+			<Style x:Key="numberButtonStyle" TargetType="Button">
+				<Setter Property="BackgroundColor" Value="White" />
+				<Setter Property="TextColor" Value="Black" />
+				<Setter Property="Font" Value="36"/>
+				<Setter Property="FontFamily" Value="Helvetica, Arial"/>
+				<Setter Property="BorderRadius" Value="0" />
+			</Style>
+			<Style x:Key="baseCalculateButtonStyle" TargetType="Button">
+				<Setter Property="BackgroundColor" Value="#FFA500" />
+				<Setter Property="TextColor" Value="White" />
+				<Setter Property="Font" Value="36" />
+				<Setter Property="BorderRadius" Value="0" />
+			</Style>
+			<Style x:Key="optionButtonStyle" TargetType="Button">
+				<Setter Property="BackgroundColor" Value="#808080" />
+				<Setter Property="TextColor" Value="White" />
+				<Setter Property="Font" Value="36" />
+				<Setter Property="BorderRadius" Value="0" />
+			</Style>
+			<Style x:Key="infoLabelStyle" BasedOn="{StaticResource baseLabelStyle}" TargetType="Label">
+				<Setter Property="FontAttributes" Value="Bold" />
+			</Style>
+			
+		</ResourceDictionary>
+	</Page.Resources>
+	
+    <Grid Padding="0,0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="Black">
+
+       <Grid.RowDefinitions>
+       <RowDefinition Height="0.5*" />
+			<RowDefinition Height="1.5*" />
+	     <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="*" />
+
+       </Grid.RowDefinitions>
+
+       <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+       </Grid.ColumnDefinitions>
+
+       <Label x:Name="explainText" Font="Bold,14" BackgroundColor="Black" Text=""
+              TextColor="White" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+              LineBreakMode="CharacterWrap" Grid.ColumnSpan="4" />
+		
+       <Label x:Name="resultText" Font="70" BackgroundColor="Black" Text="0"
+              TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="End"
+              LineBreakMode="NoWrap" Grid.Row="1" Grid.ColumnSpan="4" />
+
+	   <Button x:Name="clearButton" Text="AC" Grid.Row="2" Grid.Column="0"
+                Style="{StaticResource optionButtonStyle}" Clicked="OnClear" />
+       <Button Text="+/-" Grid.Row="2" Grid.Column="1"
+               Style="{StaticResource optionButtonStyle}" Clicked="OnSelectOption" />
+       <Button Text="%" Grid.Row="2" Grid.Column="2"
+               Style="{StaticResource optionButtonStyle}" Clicked="OnSelectOption" />
+
+		<Button x:Name="_7Button" Text="7" Grid.Row="3" Grid.Column="0"
+               Style="{StaticResource numberButtonStyle}" Clicked="OnSelectNumber" />
+       <Button x:Name="_8Button" Text="8" Grid.Row="3" Grid.Column="1"
+               Style="{StaticResource numberButtonStyle}" Clicked="OnSelectNumber" />
+       <Button x:Name="_9Button" Text="9" Grid.Row="3" Grid.Column="2"
+               Style="{StaticResource numberButtonStyle}" Clicked="OnSelectNumber" />
+
+       <Button x:Name="_4Button" Text="4" Grid.Row="4" Grid.Column="0"
+               Style="{StaticResource numberButtonStyle}" Clicked="OnSelectNumber" />
+       <Button x:Name="_5Button" Text="5" Grid.Row="4" Grid.Column="1"
+               Style="{StaticResource numberButtonStyle}" Clicked="OnSelectNumber" />
+       <Button x:Name="_6Button" Text="6" Grid.Row="4" Grid.Column="2"
+               Style="{StaticResource numberButtonStyle}" Clicked="OnSelectNumber" />
+
+       <Button x:Name="_1Button" Text="1" Grid.Row="5" Grid.Column="0"
+               Style="{StaticResource numberButtonStyle}" Clicked="OnSelectNumber" />
+       <Button x:Name="_2Button" Text="2" Grid.Row="5" Grid.Column="1"
+               Style="{StaticResource numberButtonStyle}" Clicked="OnSelectNumber" />
+       <Button x:Name="_3Button" Text="3" Grid.Row="5" Grid.Column="2"
+               Style="{StaticResource numberButtonStyle}" Clicked="OnSelectNumber" />
+       <Button x:Name="_0Button" Text="0" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"
+               Style="{StaticResource numberButtonStyle}" Clicked="OnSelectNumber" />
+		<Button Text="." Grid.Row="6" Grid.Column="2"
+               Style="{StaticResource numberButtonStyle}" Clicked="OnSelectNumber" />
+
+       <Button x:Name="divisionButton" Text="/" Grid.Row="2" Grid.Column="3"
+                Style="{StaticResource baseCalculateButtonStyle}" Clicked="OnSelectOperator" />
+       <Button x:Name="multiplicationButton" Text="X" Grid.Row="3" Grid.Column="3"
+                Style="{StaticResource baseCalculateButtonStyle}" Clicked="OnSelectOperator" />
+       <Button x:Name="subtractionButton" Text="-" Grid.Row="4" Grid.Column="3"
+                Style="{StaticResource baseCalculateButtonStyle}" Clicked="OnSelectOperator" />
+       <Button x:Name="additionButton" Text="+" Grid.Row="5" Grid.Column="3"
+                Style="{StaticResource baseCalculateButtonStyle}" Clicked="OnSelectOperator" />
+
+       <Button x:Name="enterButton" Text="=" Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="1"
+                Style="{StaticResource baseCalculateButtonStyle}" Clicked="OnCalculate" />
+
+       <Button Text="CurrencyChange" Grid.Row="7" Grid.Column="0" TextColor="White"
+               Style="{StaticResource numberButtonStyle}" Clicked="OnSpecial" />
+       <Button Text="GetDay" Grid.Row="7" Grid.Column="1" TextColor="White"
+               Style="{StaticResource numberButtonStyle}" Clicked="OnSpecial" />
+       <Button Text="PT" Grid.Row="7" Grid.Column="2"
+               Style="{StaticResource numberButtonStyle}" Clicked="OnPastNumber" />
+	   <Button Text="CP" Grid.Row="7" Grid.Column="3"
+               Style="{StaticResource numberButtonStyle}" Clicked="OnCopyNumber" />
+		
+    </Grid>
+		</ContentPage>
+	<ContentPage Title="一覧" x:Name="CulList">
+	<ContentPage.Content>
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="Getting Started">
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="bulb.png" />
+                            <Label Text="left"
+                              TextColor="#f35e20" />
+                            <Label Text="right"
+                              HorizontalOptions="EndAndExpand"
+                              TextColor="#503026" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+
+	</ContentPage>
+	<ContentPage Title="作成" x:Name="CreateCul"></ContentPage>
+</TabbedPage>

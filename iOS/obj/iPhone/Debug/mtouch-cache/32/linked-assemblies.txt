@@ -1,0 +1,15 @@
+/Users/spare-me-the-details/Projects/MyCalculator/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/System.Runtime.Serialization.dll
+/Users/spare-me-the-details/Projects/MyCalculator/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/System.ServiceModel.Internals.dll
+/Users/spare-me-the-details/Projects/MyCalculator/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/Xamarin.Forms.Platform.iOS.dll
+/Users/spare-me-the-details/Projects/MyCalculator/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/MyCalculator.iOS.exe
+/Users/spare-me-the-details/Projects/MyCalculator/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/Xamarin.Forms.Platform.dll
+/Users/spare-me-the-details/Projects/MyCalculator/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/System.dll
+/Users/spare-me-the-details/Projects/MyCalculator/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/System.Xml.dll
+/Users/spare-me-the-details/Projects/MyCalculator/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/Xamarin.iOS.dll
+/Users/spare-me-the-details/Projects/MyCalculator/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/System.Core.dll
+/Users/spare-me-the-details/Projects/MyCalculator/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/Xamarin.Forms.Xaml.dll
+/Users/spare-me-the-details/Projects/MyCalculator/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/mscorlib.dll
+/Users/spare-me-the-details/Projects/MyCalculator/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/Xamarin.Forms.Core.dll
+/Users/spare-me-the-details/Projects/MyCalculator/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/MyCalculator.dll
+/Users/spare-me-the-details/Projects/MyCalculator/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/System.Net.Http.dll
+/Users/spare-me-the-details/Projects/MyCalculator/iOS/obj/iPhone/Debug/mtouch-cache/32/Link/Mono.Dynamic.Interpreter.dll
