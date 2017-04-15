@@ -2,15 +2,15 @@
   <MonoDevelop.Ide.ItemProperties.MyCalculator.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nexus 4 (Marshmallow)" />
   <MonoDevelop.Ide.Workbench ActiveDocument="状態: MyCalculator">
     <Files>
-      <File FileName="MyCalculator/MyCalculatorPage.xaml.cs" Line="44" Column="52" />
+      <File FileName="ログ" />
       <File FileName="状態: MyCalculator" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.MyCalculator.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.ItemProperties.MyCalculator.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1FBC62DE-6231-41E2-A425-A24F751DF054" />
 </Properties>
