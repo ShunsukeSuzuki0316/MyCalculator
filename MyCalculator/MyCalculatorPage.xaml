@@ -6,8 +6,16 @@
   <ContentPage Title="電卓" x:Name="Cul">  
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
-            <OnPlatform.iOS>0,20,0,0</OnPlatform.iOS>
-        </OnPlatform>
+      <OnPlatform.iOS>
+        0, 20, 0, 0
+      </OnPlatform.iOS>
+      <OnPlatform.Android>
+        0, 0, 0, 0
+      </OnPlatform.Android>
+      <OnPlatform.WinPhone>
+        0, 0, 0, 0
+      </OnPlatform.WinPhone>
+    </OnPlatform>
     </ContentPage.Padding>
 
     <Page.Resources>
@@ -26,7 +34,7 @@
 				<Setter Property="BorderRadius" Value="0" />
 			</Style>
 			<Style x:Key="baseCalculateButtonStyle" TargetType="Button">
-				<Setter Property="BackgroundColor" Value="#FFA500" />
+				<Setter Property="BackgroundColor" Value="Silver" />
 				<Setter Property="TextColor" Value="White" />
 				<Setter Property="Font" Value="36" />
 				<Setter Property="BorderRadius" Value="0" />
@@ -44,17 +52,17 @@
 		</ResourceDictionary>
 	</Page.Resources>
 	
-    <Grid Padding="0,0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="Black">
+    <Grid Padding="0,0" RowSpacing="0.5" ColumnSpacing="0.5" BackgroundColor="Black">
 
        <Grid.RowDefinitions>
-       <RowDefinition Height="0.5*" />
-			<RowDefinition Height="1.5*" />
+         <RowDefinition Height="0.5*" />
+	     <RowDefinition Height="1.5*" />
 	     <RowDefinition Height="*" />
          <RowDefinition Height="*" />
          <RowDefinition Height="*" />
          <RowDefinition Height="*" />
-         <RowDefinition Height="*" />
-
+		 <RowDefinition Height="*" />
+         <RowDefinition Height="0.7*" />
        </Grid.RowDefinitions>
 
        <Grid.ColumnDefinitions>
@@ -116,14 +124,10 @@
        <Button x:Name="enterButton" Text="=" Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="1"
                 Style="{StaticResource baseCalculateButtonStyle}" Clicked="OnCalculate" />
 
-       <Button Text="CurrencyChange" Grid.Row="7" Grid.Column="0" TextColor="White"
-               Style="{StaticResource numberButtonStyle}" Clicked="OnSpecial" />
-       <Button Text="GetDay" Grid.Row="7" Grid.Column="1" TextColor="White"
-               Style="{StaticResource numberButtonStyle}" Clicked="OnSpecial" />
-       <Button Text="PT" Grid.Row="7" Grid.Column="2"
-               Style="{StaticResource numberButtonStyle}" Clicked="OnPastNumber" />
-	   <Button Text="CP" Grid.Row="7" Grid.Column="3"
-               Style="{StaticResource numberButtonStyle}" Clicked="OnCopyNumber" />
+       <Button Text="ペースト" Grid.Row="7" Grid.Column="0"
+               Style="{StaticResource numberButtonStyle}" Clicked="OnPastNumber" Grid.ColumnSpan="2" Image="paste" FontSize="15" BackgroundColor="#EFEFF4"/>
+	   <Button Text="コピー" Grid.Row="7" Grid.Column="2"
+               Style="{StaticResource numberButtonStyle}" Clicked="OnCopyNumber" Grid.ColumnSpan="2" Image="copy" FontSize="15" BackgroundColor="#EFEFF4"/>
 		
     </Grid>
 		</ContentPage>

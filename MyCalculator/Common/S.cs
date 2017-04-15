@@ -9,51 +9,17 @@ namespace MyCalculator
 	public static class S
 	{
 		/// <summary>
-		/// x数値
+		/// 入力が確定された数値を格納します
 		/// </summary>
-		public static decimal x;
+		public static List<decimal> inputValue = new List<decimal>();
 		/// <summary>
-		/// y数値
+		/// 入力された数値・演算子を格納します
 		/// </summary>
-		public static decimal y;
-		/// <summary>
-		/// 表示されているxのテキスト
-		/// </summary>
-		public static string xText;
-		/// <summary>
-		/// 表示されているyのテキスト
-		/// </summary>
-		public static string yText;
-
-		/// <summary>
-		/// 基本の四則演算モード以外のモードが有効か判定
-		/// </summary>
-		public static bool specFlag = false;
-		/// <summary>
-		/// 特殊入力モードか判定します
-		/// </summary>
-		public static bool specKey = false;
-
-		/// <summary>
-		/// 計算結果を格納します
-		/// </summary>
-		public static List<decimal> result = new List<decimal>();
-		/// <summary>
-		/// 計算方法を格納します
-		/// </summary>
-		public static List<Delegate> calculateType = new List<Delegate>();
-		/// <summary>
-		/// xとyの組み合わせを格納します
-		/// </summary>
-		public static Dictionary<decimal, decimal> nums = new Dictionary<decimal, decimal>();
+		public static List<string> inputFormula = new List<string>();
 		/// <summary>
 		/// 選択状態にある特別計算のクラス名を保持します
 		/// </summary>
 		public static Type selectSpecialClass = null;
-		/// <summary>
-		/// 選択中のdelegateを保持します
-		/// </summary>
-		public static Delegate selectDelegate = null;
 		/// <summary>
 		/// 特別計算クラス終了フラグ
 		/// </summary>
@@ -61,52 +27,55 @@ namespace MyCalculator
 		/// <summary>
 		/// 特別計算クラス途中経過スタックディクショナリ
 		/// </summary>
-		public static Dictionary<string, Dictionary<string, string>> stackDictionary = new Dictionary<string, Dictionary<string, string>>();
-
+		public static List<Dictionary<string, string>> stackDictionary = new List<Dictionary<string, string>>();
+		/// <summary>
+		/// 各プラットフォームのDBのパス
+		/// </summary>
 		public static String dbPath = null;
-
+		/// <summary>
+		/// 選択されたユーザの計算
+		/// </summary>
 		public static UserCulculateModel selectUserModel = null;
-
+		/// <summary>
+		/// 特別計算の最後の結果
+		/// </summary>
 		public static decimal LastCulculateResult = 0;
 
-		public static void Clear()
+		public static double DisplayWidth = 0.0d;
+
+		public static double DisplayHieght = 0.0d;
+
+		/// <summary>
+		/// 特別計算で使用する式を格納します
+		/// </summary>
+		public static Queue<CulculateFormulaJsonModel> formulaQueue = new Queue<CulculateFormulaJsonModel>();
+
+		/// <summary>
+		/// 最初の式であるかのフラグ
+		/// </summary>
+		public static bool firstFormula = true;
+
+
+		/// <summary>
+		/// 各種共通で扱う静的変数を初期化します
+		/// </summary>
+		public static void InitParameter()
 		{
-			x = 0;
-			y = 0;
-			xText = null;
-			yText = null;
-
-			//計算結果を格納します。
-			result.Clear();
-			//計算方法を格納します。
-			calculateType.Clear();
-			//xとyの組み合わせを格納します
-			nums.Clear();
+			//最初の式フラグを戻します
+			firstFormula = true;
+			//式のキューをリセットします
+			formulaQueue.Clear();
+			//選択したクラスをリセットします
 			selectSpecialClass = null;
-			specFlag = false;
-			finalFlag = false;
-			selectDelegate = null;
+			//計算の途中結果をスタックするディクショナリをクリアします
 			stackDictionary.Clear();
-		}
-
-		public static void AllClear()
-		{
-			x = 0;
-			y = 0;
-			xText = null;
-			yText = null;
-
-			//計算結果を格納します。
-			result.Clear();
-			//計算方法を格納します。
-			calculateType.Clear();
-			//xとyの組み合わせを格納します
-			nums.Clear();
-			selectSpecialClass = null;
-			specFlag = false;
+			//最終式フラグを戻します
 			finalFlag = false;
-			selectDelegate = null;
-			stackDictionary.Clear();
+			//選択したユーザモデルをクリアします
+			selectUserModel = null;
+
+			inputValue.Clear();
+			inputFormula.Clear();
 		}
 	}
 }

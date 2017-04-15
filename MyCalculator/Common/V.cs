@@ -90,9 +90,9 @@ namespace MyCalculator
 		/// </summary>
 		public static readonly string MainDicKeyName_XText = "x";
 		/// <summary>
-		/// 共通ディクショナリキー:yテキスト
-		/// </summary>
-		public static readonly string MainDicKeyName_YText = "y";
+		///// 共通ディクショナリキー:yテキスト
+		///// </summary>
+		//public static readonly string MainDicKeyName_YText = "y";
 		/// <summary>
 		/// 共通ディクショナリキー:リザルトテキスト
 		/// </summary>
@@ -109,31 +109,12 @@ namespace MyCalculator
 		/// 共通ディクショナリキー:エラーフラグ
 		/// </summary>
 		public static readonly string MainDicKeyName_Error = "error";
-		/// <summary>
-		/// 共通ディクショナリキー:特殊入力モードフラグ
-		/// </summary>
-		public static readonly string MainDicKeyName_SpecKeyFlg = "speckey";
-		/// <summary>
-		/// 共通ディクショナリキー:キーインデックス
-		/// </summary>
-		public static readonly string MainDicKeyName_SpecKeyIndex = "specindex";
 
 		public static readonly string MainDicKeyName_LastCulculateResult = "lastculculateresult";
 
-		public static readonly List<string> CurrencyList = new List<string> { "USD", "JPY", "EUR", "GBP", "AUD", "NZD", "CHF", "CAD", "ZAR", "CNY" };
-		public static readonly List<string> CurrencyExplainList = new List<string> { "US Dollar ($)", "Japanese Yen (¥)", "Euro (€)", "British Pound (£)","Australian Dollar (A$)","New Zealand Dollar (NZ$)","Swiss Franc (CHF)","Canadian Dollar (CA$)","South African Rand (ZAR)","Chinese Yuan (CN¥)" };
-
-		public static readonly List<string> NormalKeyList = new List<string> { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-
-		public static readonly List<List<string>> KeyList = new List<List<string>> { CurrencyList,NormalKeyList };
-
-		public static readonly List<string> DefaultCuculateList = new List<string> { "CurrencyChange", "GetDay" };
-		public static readonly List<string> DefaultCuculateNameList = new List<string> { "通貨計算", "曜日取得" };
-
-		public static readonly int CurrencyKeyListIndex=0;
-		public static readonly int NormalKeyListIndex=1;
-
 		public static readonly double FontSizeBase = 70.0;
+
+		public static readonly string NEXT_MARK = "次へ";
 
 
 	}

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage BackgroundColor="#EFEFF4" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MyCalculator.HelpPage">
+	<Page.Resources>
+		<ResourceDictionary>
+			<Style x:Key="LabelCommon" TargetType="Label">
+				<Setter Property="TextColor" Value="Black" />
+				<Setter Property="Font" Value="18" />
+				<Setter Property="FontFamily" Value="Helvetica, Arial" />
+			</Style>
+			<Style x:Key="SubTitleLabel" TargetType="Label">
+				<Setter Property="TextColor" Value="Black" />
+				<Setter Property="Font" Value="20" />
+				<Setter Property="FontFamily" Value="Helvetica, Arial" />
+				<Setter Property="FontAttributes" Value="Bold" />
+			</Style>
+		</ResourceDictionary>
+	</Page.Resources>
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout Margin="20,60,20,60">
+				<StackLayout HorizontalOptions="Center" Margin="20,0,0,20">
+					<Label Style="{StaticResource SubTitleLabel}" Font="24" FontAttributes="Bold" Text="計算作成ヘルプ">
+					</Label>
+				</StackLayout>
+				<Label Style="{StaticResource SubTitleLabel}" FontAttributes="Bold" Text="名前">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Margin="0,0,0,5"  Text="一覧に表示される名前を入力します。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" FontAttributes="Bold" Text="説明">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Margin="0,0,0,5"  Text="電卓に表示する説明文を入力します。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" FontAttributes="Bold" Text="最終ステップ">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Margin="0,0,0,5"  Text="計算を終了するステップを設定します。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" FontAttributes="Bold" Text="計算追加">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Margin="0,0,0,5"  Text="ステップに計算式項目を追加します。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" FontAttributes="Bold" Text="ステップ追加">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Margin="0,0,0,5"  Text="新しいステップを追加します。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" FontAttributes="Bold" Text="ステップ削除">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Margin="0,0,0,5"  Text="ステップを削除します。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" FontAttributes="Bold" Text="保存">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Margin="0,0,0,5"  Text="作成した計算を保存します。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" FontAttributes="Bold" Text="やり直す">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Margin="0,0,0,5"  Text="編集した内容をクリアします。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Margin="0,0,0,5"  Text="※編集した内容は保存されず破棄されるので注意してください。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" FontAttributes="Bold" Text="計算式項目">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Margin="0,0,0,5"  Text="計算式項目ではステップで入力された値等を使った計算式を作成します。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Margin="0,0,0,5"  Text="対象には下記を選択できます。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" FontAttributes="Bold" Text="・入力された値">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Margin="0,0,0,5"  Text="ステップで入力された値を使用します。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" FontAttributes="Bold" Text="・定数">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Margin="0,0,0,5"  Text="任意の値を計算作成時に入力して使用します。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" FontAttributes="Bold" Text="・前回の計算結果">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Margin="0,0,0,5"  Text="対象の計算式項目の前の計算式項目で計算された結果を使用します。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" FontAttributes="Bold" Text="・前ステップの最後の計算結果">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Margin="0,0,0,5"  Text="いずれかのステップの最後の計算式項目で計算された結果を使用します。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" Margin="0,20,0,5" Font="22" FontAttributes="Bold" Text="計算作成例)">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="例として円の面積の計算を作成します。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" Margin="0,5,0,0" FontAttributes="Bold" Text="①計算に名前をつける">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="始めに円の面積を計算する計算なので名前には「円の面積」と入力します。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" Margin="0,5,0,0" FontAttributes="Bold" Text="②計算に必要な値を電卓から入力するように設定する">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="まず、円の面積の計算には半径が必要です。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="ステップ1に半径を入力する様に設定します。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="説明に「半径を入力してください」と入力します。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" Margin="0,5,0,0" FontAttributes="Bold" Text="③計算式を追加する">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="ステップ2では必要な値が揃いましたので、">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="円の面積を出す計算を作成します。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="まずは計算追加をタップします。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="ステップ2に計算式項目が表示されます。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="まずは上の対象リストボックスから">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="入力された値を選択します。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="値にはステップ1で入力された値を選択します。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="下の対象リストボックスにも同様に">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="同じ値を選択します。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="そして、演算子にはXを選択します。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="この計算式項目の式は、">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="例えばステップ1で5と入力されていれば、">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="5 X 5 = 25 になります。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="次に円周率を掛けるために、">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="計算式項目をもう一つ追加します。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="上の対象には前回の計算結果を選択します。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="下の対象には定数を選択します。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="値には円周率の3.14を入力します。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="そして演算子にはXを選択します。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="この計算式項目の式は、">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="一つ前の計算式項目の結果と定数の値に入力した">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="3.14 が使用され">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="25 X 3.14 = 78.5 になります。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" Margin="0,5,0,0" FontAttributes="Bold" Text="④最終ステップを設定する">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="これで円の面積が得られましたので、">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="このステップを最終ステップにします。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="最終ステップのトグルをONにするとそのステップが最終ステップになります。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="説明には「円の面積を計算しました」と入力します。">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="最終ステップではそのステップの最後の計算式項目で計算された結果が電卓に表示されます。">
+				</Label>
+				<Label Style="{StaticResource SubTitleLabel}" Margin="0,5,0,0" FontAttributes="Bold" Text="⑤作成した計算を保存する">
+				</Label>
+				<Label Style="{StaticResource LabelCommon}" Text="上記までで編集した内容は保存をタップしないと保存できないので、最後に忘れずにタップします。">
+				</Label>
+				<Button Clicked="OnDismissButtonClicked" Text="閉じる" HorizontalOptions="Center" WidthRequest="150.0" BorderWidth="0.5" Margin="15,15,15,15" BackgroundColor="#f79b92">
+				</Button>
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

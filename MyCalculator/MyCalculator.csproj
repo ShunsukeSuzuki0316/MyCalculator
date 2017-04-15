@@ -30,6 +30,9 @@
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
     <EmbeddedResource Include="MyCalculatorPage.xaml" />
+    <EmbeddedResource Include="HelpPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -46,27 +49,39 @@
     <Compile Include="Calculate\Integrity.cs" />
     <Compile Include="Common\U.cs" />
     <Compile Include="Calculate\OP.cs" />
-    <Compile Include="Special\Special.cs" />
-    <Compile Include="Special\CurrencyChange.cs" />
-    <Compile Include="Special\GetDay.cs" />
     <Compile Include="Common\S.cs" />
-    <Compile Include="DataBase\UserCulculateUtil.cs" />
-    <Compile Include="Common\CL.cs" />
-    <Compile Include="DataBase\DefaultCulculateUtil.cs" />
-    <Compile Include="CreateCulculate\Json\CulculateJsonModel.cs" />
-    <Compile Include="CreateCulculate\Json\StepJsonModel.cs" />
-    <Compile Include="CreateCulculate\Json\ExecuteJsonModel.cs" />
-    <Compile Include="CreateCulculate\Json\JAN.cs" />
-    <Compile Include="Special\SpecialUtil.cs" />
-    <Compile Include="CreateCulculate\CreateMode.cs" />
-    <Compile Include="CreateCulculate\CulcModel.cs" />
-    <Compile Include="CreateCulculate\EditListBaseModel.cs" />
-    <Compile Include="CreateCulculate\EditListStyles.cs" />
+    <Compile Include="Editor\Json\CulculateJsonModel.cs" />
+    <Compile Include="Editor\Json\CulculateFormulaJsonModel.cs" />
+    <Compile Include="Editor\Json\ExecuteJsonModel.cs" />
+    <Compile Include="Editor\Json\JAN.cs" />
     <Compile Include="DataBase\Model\UserCulculateModel.cs" />
     <Compile Include="DataBase\Model\DefaultCulculateModel.cs" />
-    <Compile Include="CreateCulculate\UpdateMode.cs" />
-    <Compile Include="CreateCulculate\ModeCommon.cs" />
-    <Compile Include="IClipBoard.cs" />
+    <Compile Include="Editor\UpdateMode.cs" />
+    <Compile Include="Editor\ModeCommon.cs" />
+    <Compile Include="Calculate\Special\Special.cs" />
+    <Compile Include="Calculate\Special\SpecialUtil.cs" />
+    <Compile Include="DataBase\Util\DefaultCulculateUtil.cs" />
+    <Compile Include="DataBase\Util\UserCulculateUtil.cs" />
+    <Compile Include="Common\ImageResizer.cs" />
+    <Compile Include="Common\Interface\DisplaySize.cs" />
+    <Compile Include="Common\Interface\IClipBoard.cs" />
+    <Compile Include="Common\ListForEachExt.cs" />
+    <Compile Include="CreateList\CreateList.cs" />
+    <Compile Include="CreateList\CreateListStyles.cs" />
+    <Compile Include="Editor\Model\EditorBaseModel.cs" />
+    <Compile Include="Editor\Model\CulcModel.cs" />
+    <Compile Include="Editor\Sytle\EditorPickerStyle.cs" />
+    <Compile Include="Editor\Sytle\EditorLayoutStyle.cs" />
+    <Compile Include="Editor\Sytle\EditorButtonStyle.cs" />
+    <Compile Include="Editor\Sytle\EditorEntryStyle.cs" />
+    <Compile Include="Editor\Sytle\EditorViewStyle.cs" />
+    <Compile Include="Editor\Sytle\EditorLabelStyle.cs" />
+    <Compile Include="Editor\CreateMode.cs" />
+    <Compile Include="Editor\Sytle\EditorStyles.cs" />
+    <Compile Include="Common\F.cs" />
+    <Compile Include="HelpPage.xaml.cs">
+      <DependentUpon>HelpPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
@@ -117,17 +132,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Image\culicon.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Calculate\" />
     <Folder Include="Common\" />
-    <Folder Include="Special\" />
     <Folder Include="DataBase\" />
-    <Folder Include="CreateCulculate\" />
-    <Folder Include="CreateCulculate\Json\" />
+    <Folder Include="Editor\" />
+    <Folder Include="Editor\Json\" />
     <Folder Include="DataBase\Model\" />
-    <Folder Include="Image\" />
+    <Folder Include="Calculate\Special\" />
+    <Folder Include="Calculate\Default\" />
+    <Folder Include="DataBase\Util\" />
+    <Folder Include="Common\Interface\" />
+    <Folder Include="CreateList\" />
+    <Folder Include="Editor\Model\" />
+    <Folder Include="Editor\Sytle\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{1AF0B062-8222-466D-ABEC-97AC23C738BC}|Default" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.ItemProperties.MyCalculator.Droid PreferredExecutionTarget="Android.Nexus 4 (Marshmallow)" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MyCalculator/CreateCulculate/EditListStyles.cs">
+  <MonoDevelop.Ide.ItemProperties.MyCalculator.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nexus 4 (Marshmallow)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="状態: MyCalculator">
     <Files>
-      <File FileName="MyCalculator/CreateCulculate/EditListStyles.cs" Line="8" Column="26" />
-      <File FileName="MyCalculator/CreateCulculate/UpdateMode.cs" Line="1" Column="1" />
+      <File FileName="MyCalculator/MyCalculatorPage.xaml.cs" Line="44" Column="52" />
+      <File FileName="状態: MyCalculator" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
@@ -11,5 +11,6 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.MyCalculator.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
 </Properties>

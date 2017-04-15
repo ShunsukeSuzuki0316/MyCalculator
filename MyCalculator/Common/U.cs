@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using Xamarin.Forms;
+using System.Linq;
 
 namespace MyCalculator
 {
@@ -56,11 +57,10 @@ namespace MyCalculator
 		{
 			var dic = new Dictionary<string, string>();
 
-			dic.Add(V.MainDicKeyName_XText, S.xText);
-			dic.Add(V.MainDicKeyName_YText, S.yText);
+			dic.Add(V.MainDicKeyName_XText, S.inputValue.Last().ToString());
 			dic.Add(V.MainDicKeyName_LastCulculateResult, S.LastCulculateResult.ToString());
 
-			S.stackDictionary.Add(name, dic);
+			S.stackDictionary.Add(dic);
 
 		}
 
@@ -72,29 +72,10 @@ namespace MyCalculator
 		{
 			var dic = new Dictionary<string, string>();
 
-			dic.Add(V.MainDicKeyName_XText, S.xText);
-			dic.Add(V.MainDicKeyName_YText, S.yText);
+			dic.Add(V.MainDicKeyName_XText, S.inputValue.Last().ToString());
 			dic.Add(V.MainDicKeyName_LastCulculateResult, S.LastCulculateResult.ToString());
 
-			var target = "Step" + (int.Parse(Regex.Match(name, @"[\d]+").Captures[0].Value) - 1);
-
-			S.stackDictionary.Add(target, dic);
-
-		}
-
-
-		/// <summary>
-		/// 文字数からフォントサイズを計算してフォントサイズを変更します
-		/// </summary>
-		/// <param name="resultText">Result text.</param>
-		public static void setFontSize(Label resultText){
-
-			if(resultText.Text.Length > 8){
-				resultText.FontSize = (resultText.Width / resultText.Text.Length) * 1.6;
-			}else{
-				resultText.FontSize = V.FontSizeBase;
-			}
-
+			S.stackDictionary.Add(dic);
 		}
 	}
 }

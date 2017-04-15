@@ -1,38 +1,30 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 namespace MyCalculator
 {
 	public static class OP
 	{
-		public static decimal parsent(string x, string y)
+		public static decimal parsent()
 		{
+			decimal val;
 
-			if (y != null)
-			{
-				decimal val = "0".Equals(y) ? 0 : decimal.Parse(y) / 100;
-				S.yText = val.ToString();
-				return val;
-			}
-			else {
-				decimal val = "0".Equals(x) ? 0 :  decimal.Parse(x) / 100;
-				S.xText = val.ToString();
-				return val;
+			if(V.SubtractionMethodName.Equals(F.getLastMethod())||
+			   V.AdditionMethodName.Equals(F.getLastMethod())){
+
+				val = decimal.Parse(F.getLastMethdPreNumber()) * (decimal.Parse(F.getLastNum()) / 100);
+
+			}else{
+				val = decimal.Parse(F.getLastNum()) / 100;
 			}
 
+			return val;
 		}
-		public static decimal plusminus(string x, string y)
-		{
 
-			if (y != null)
-			{
-				decimal val = "0".Equals(y) ? 0 :  decimal.Parse(y) * -1;
-				S.yText = val.ToString();
-				return val;
-			}
-			else {
-				decimal val = "0".Equals(x) ? 0 : decimal.Parse(x) * -1;
-				S.xText = val.ToString();
-				return val;
-			}
+		public static decimal plusminus()
+		{
+			decimal val = "0".Equals(F.getLastNum()) ? 0 :  decimal.Parse(F.getLastNum()) * -1;
+			return val;
 		}
 
 	}

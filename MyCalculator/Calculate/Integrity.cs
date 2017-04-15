@@ -34,14 +34,7 @@ namespace MyCalculator
 					resultText.Text += pressed;
 				}
 
-				if (S.xText != null && S.calculateType.Count != 0)
-				{
-					S.yText = resultText.Text;
-				}
-				else {
-
-					S.xText = resultText.Text;
-				}
+				F.insertValue(resultText.Text);
 			}
 
 		}
@@ -53,16 +46,11 @@ namespace MyCalculator
 		public static bool checkNeedNowResultTextClear(Label resultText)
 		{
 
-			//値が指数表記の場合は例外的にクリアを実施する
-			if (System.Text.RegularExpressions.Regex.Matches(resultText.Text, @".*\d+[eE].*").Count > 0)
-			{
+			if(S.inputFormula.Count != 0 && !F.isLastNum() ){
 				return true;
 			}
 
-			if (S.calculateType.Count == 0) { return false; }
-			if (S.yText != null) { return false; }
-
-			return true;
+			return false;
 
 		}
 

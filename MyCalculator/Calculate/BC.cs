@@ -29,5 +29,6 @@ namespace MyCalculator
 		public static decimal exponentiation(decimal x,decimal y){
 			return (decimal)Math.Pow((double)x,(double)y);
 		}
+
 	}
 }
